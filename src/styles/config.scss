@@ -1,0 +1,106 @@
+// Utils
+
+$base-font-size: 18;
+
+// Returns rem value from a pixel value
+// @param {Number} $n - Pixel value to be converted
+// @return {Number} Rem value
+
+@function rem($n) {
+  $result: 0rem + $n / $base-font-size;
+  @return $result;
+}
+
+// Returns em value from a pixel value
+// @param {Number} $n - Pixel value to be converted
+// @return {Number} em value
+
+@function em($n) {
+  $result: 0em + $n / $base-font-size;
+  @return $result;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Spacing
+
+$spacing-base: 3;
+
+$spacing-map: (
+  none    : 0,
+  smaller : rem($spacing-base),
+  small   : rem($spacing-base * 2),
+  base    : rem($spacing-base * 6),
+  large   : rem($spacing-base * 8),
+  larger  : rem($spacing-base * 9)
+);
+
+// Returns the spacing value for a given variant.
+// @param {String} $variant - The key for the given variant.
+// @return {Number} The spacing for the variant in rems.
+
+@function spacing($variant: base) {
+  $space: map-get($spacing-map, $variant);
+
+  @if type-of($space) == number {
+    @return $space;
+  } @else {
+    @error 'Spacing variant `#{$variant}` not found.';
+  }
+}
+
+
+// Colors
+
+
+$color-map: (
+  blue: (
+    base : #2C44F1
+  ),
+
+  gray: (
+    base : #797B81,
+    0    : #000000,
+    1    : #343840,
+    2    : #797B81,
+    3    : #9FA2A8,
+    10   : #FEFEFE
+  ),
+
+  red: (
+    base: #F12C2C
+  ),
+);
+
+// Returns color hex code
+// @param {String} $hue - The base color hue
+// // @param {String} $value - The color hue variant
+// @return {Color} The color hex code
+
+@function color($hue, $value: base) {
+  $hue-map: map-get($color-map, $hue);
+  $color: map-get($hue-map, $value);
+
+  @if type-of($color) == color {
+    @return $color;
+  } @else {
+    @error 'Color `#{$hue} - #{$value}` not found.';
+  }
+}
+
+// @import 'config/border-radius';
+// @import 'config/shadows';
+// @import 'config/spacing';
+// @import 'config/typography';
+// @import 'config/breakpoints';
+// @import 'config/accessibility';
+// @import 'config/z-index';

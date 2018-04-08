@@ -1,0 +1,11 @@
+@import 'src/styles/config.scss';
+
+.UnstyledLink, .UnstyledLink:visited {
+  color: color(blue);
+  text-decoration: none;
+  transition: 0.1s;
+
+  &:hover {
+    color: color(red);
+  }
+}

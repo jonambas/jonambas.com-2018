@@ -1,0 +1,14 @@
+@import 'src/styles/config.scss';
+
+.Container {
+  height: 100vh;
+  padding: 0 spacing();
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Content {
+  max-width: rem(500);
+}

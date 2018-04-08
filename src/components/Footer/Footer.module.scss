@@ -1,0 +1,19 @@
+@import 'src/styles/config.scss';
+
+.Footer {
+  position: absolute;
+  bottom: spacing(large);
+  left: 0;
+  right: 0;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+}
+
+.Item {
+  display: inline-block;
+  padding: spacing(small) spacing();
+}
