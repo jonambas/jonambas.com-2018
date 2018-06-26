@@ -14,7 +14,7 @@ const Footer = () => (
       <UnstyledLink external to='https://twitter.com/jonambas'>@jonambas</UnstyledLink>
     </li>
     <li className={styles.Item}>
-      <UnstyledLink external to='http://jonambas.com/mailto:jon@jonambas.com?subject=Hello!'>jon@jonambas.com</UnstyledLink>
+      <UnstyledLink external to='mailto:jon@jonambas.com?subject=Hello!'>jon@jonambas.com</UnstyledLink>
     </li>
   </ul>
 )
