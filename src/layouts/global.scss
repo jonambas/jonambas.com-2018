@@ -16,7 +16,8 @@ html {
   }
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin-top: 0;
   margin-bottom: spacing();
 }
 
@@ -28,6 +29,12 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   color: color(gray, 2);
+  letter-spacing: 0.01em;
+  line-height: 1.6em;
+  font-weight: 400;
+}
+
+li {
   letter-spacing: 0.01em;
   line-height: 1.6em;
   font-weight: 400;

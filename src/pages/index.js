@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { Container, UnstyledLink } from 'components';
 
 const IndexPage = () => (
-  <Container>
+  <Container compact>
     <h1>Jon Ambas</h1>
     <p>
       Currently a front end engineer at <UnstyledLink external to='https://www.sparkpost.com'>SparkPost</UnstyledLink>,

@@ -19,10 +19,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {
+    "classnames": "^2.2.6",
     "prettier": "^1.11.1"
   }
 }
